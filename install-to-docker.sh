@@ -14,7 +14,7 @@ echo ""
 
 # Check if we're in the right directory
 if [ ! -f "manifest.json" ] || [ ! -f "ModEntry.cs" ]; then
-    echo -e "${RED}Error: Please run this script from the stardew-multiplayer-time-mod directory${NC}"
+    echo -e "${RED}Error: Please run this script from the stardew-skull-cavern-multiplayer directory${NC}"
     exit 1
 fi
 

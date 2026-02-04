@@ -50,7 +50,7 @@ If you're using the Docker setup, see **[DOCKER_INTEGRATION.md](DOCKER_INTEGRATI
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd stardew-multiplayer-time-mod
+cd stardew-skull-cavern-multiplayer
 
 # Build
 dotnet build -c Release

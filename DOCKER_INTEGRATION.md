@@ -17,7 +17,7 @@ The cavazos-apps Docker setup:
 First, build the mod (do this on your local machine or VM):
 
 ```bash
-cd /path/to/stardew-multiplayer-time-mod
+cd /path/to/stardew-skull-cavern-multiplayer
 dotnet build -c Release
 ```
 
@@ -36,11 +36,11 @@ mkdir -p "docker/mods/SkullCavernTimeFixMultiplayer"
 
 ```bash
 # Copy the DLL
-cp /path/to/stardew-multiplayer-time-mod/bin/Release/net6.0/SkullCavernTimeFixMultiplayer.dll \
+cp /path/to/stardew-skull-cavern-multiplayer/bin/Release/net6.0/SkullCavernTimeFixMultiplayer.dll \
    "docker/mods/SkullCavernTimeFixMultiplayer/"
 
 # Copy the manifest
-cp /path/to/stardew-multiplayer-time-mod/manifest.json \
+cp /path/to/stardew-skull-cavern-multiplayer/manifest.json \
    "docker/mods/SkullCavernTimeFixMultiplayer/"
 ```
 
@@ -149,7 +149,7 @@ To update to a new version:
 
 ```bash
 # Build new version
-cd /path/to/stardew-multiplayer-time-mod
+cd /path/to/stardew-skull-cavern-multiplayer
 dotnet build -c Release
 
 # Copy to Docker setup
