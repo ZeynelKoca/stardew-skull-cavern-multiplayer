@@ -18,7 +18,6 @@ This mod ignores the host player when calculating Skull Cavern time slowdown, ef
 - **Smart Detection**: Only counts remote players, completely ignoring the headless host
 - **Proportional Slowdown**: Time slows down based on the percentage of players in Skull Cavern
 - **Configurable**: Adjust slowdown multiplier and minimum player threshold
-- **Lightweight**: Uses Harmony patches for efficient, clean integration
 - **Debug Logging**: Optional verbose mode for troubleshooting
 
 ## Installation
@@ -144,17 +143,6 @@ Change `MinimumPlayerPercentage` to `0.33` to allow slowdown with just 1 of 3 pl
 - **Linux**: `~/.config/StardewValley/ErrorLogs/SMAPI-latest.txt`
 - **Mac**: `~/.config/StardewValley/ErrorLogs/SMAPI-latest.txt`
 - **Docker**: Check container logs or `/config/xdg/config/StardewValley/ErrorLogs/SMAPI-latest.txt`
-
-## How It Works
-
-1. The mod uses Harmony to patch `Game1.performTenMinuteClockUpdate`
-2. When time is about to advance, it checks:
-   - Are we in multiplayer with remote players?
-   - How many remote players (excluding host) are in Skull Cavern?
-3. If enough players are in Skull Cavern (based on `MinimumPlayerPercentage`), it applies a time slowdown
-4. The slowdown is proportional to the percentage of players inside
-
-The host player is **completely ignored** in all calculations.
 
 ## License
 
