@@ -1,0 +1,11 @@
+{
+  "Name": "Skull Cavern Time Fix for Multiplayer",
+  "Author": "ZeynelKoca",
+  "Version": "1.0.0",
+  "Description": "Fixes Skull Cavern time slowdown in multiplayer by ignoring the headless host bot. Time slows down based on remote players only, not the host.",
+  "UniqueID": "ZeynelKoca.SkullCavernTimeFixMultiplayer",
+  "UpdateKeys": [],
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [],
+  "EntryDll": "SkullCavernTimeFixMultiplayer.dll"
+}
