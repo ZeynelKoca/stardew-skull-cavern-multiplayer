@@ -1,0 +1,24 @@
+## Build results
+bin/
+obj/
+
+## Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+packages/
+
+## Rider
+.idea/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Mod specific
+config.json
