@@ -44,20 +44,27 @@ environment:
 
 ## Verify
 
+Check SMAPI logs (recommended):
 ```bash
-docker logs stardew | grep SkullCavern
+docker exec stardew cat /config/xdg/config/StardewValley/ErrorLogs/SMAPI-latest.txt | grep SkullCavern
+```
+
+Or use docker compose logs:
+```bash
+docker compose -f docker-compose-steam.yml logs -f | grep SkullCavern
 ```
 
 Should see: `Skull Cavern Time Fix loaded successfully!`
 
 ## Troubleshooting
 
-Enable verbose logging:
+Enable verbose logging in `docker-compose-steam.yml`:
 ```yaml
 - SKULLCAVERNTIMEFIXMULTIPLAYER_VERBOSE_LOGGING=true
 ```
 
-Check logs:
+Then rebuild and check logs:
 ```bash
+docker compose -f docker-compose-steam.yml up -d
 docker exec stardew cat /config/xdg/config/StardewValley/ErrorLogs/SMAPI-latest.txt | grep SkullCavern
 ```

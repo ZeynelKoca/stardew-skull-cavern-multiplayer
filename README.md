@@ -58,10 +58,18 @@ Output: `bin/Release/net6.0/SkullCavernTimeFixMultiplayer.dll`
 
 ## Troubleshooting
 
-Enable `VerboseLogging` in config.json and check SMAPI logs for:
+Enable `VerboseLogging` in config.json and check SMAPI logs:
+
+**Standard:**
+- Windows: `%appdata%\StardewValley\ErrorLogs\SMAPI-latest.txt`
+- Linux: `~/.config/StardewValley/ErrorLogs/SMAPI-latest.txt`
+
+**Docker:**
+```bash
+docker exec stardew cat /config/xdg/config/StardewValley/ErrorLogs/SMAPI-latest.txt | grep SkullCavern
 ```
-[SkullCavernTimeFixMultiplayer] Applied Skull Cavern slowdown: 1/2 players inside
-```
+
+Should see: `Applied Skull Cavern slowdown: 1/2 non-host players inside`
 
 ## License
 
